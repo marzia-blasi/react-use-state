@@ -1,9 +1,11 @@
 import { useState } from "react";
 
 export default function Main() {
-  const [open, isOpen] = useState(null);
+  const [open, setOpen] = useState(false);
 
-  function handleClick() {}
+  function handleClick() {
+    setOpen(!open);
+  }
 
   //array da cui prendere i dati
 
@@ -42,15 +44,14 @@ export default function Main() {
 
   return (
     <>
-      <p>prova</p>
       {languages.map((item) => {
         return (
-          <>
-            <button key={item.id}>{item.title}</button>
+          <div key={item.id}>
+            <button>{item.title}</button>
             <div>
               <p>{item.text}</p>
             </div>
-          </>
+          </div>
         );
       })}
     </>

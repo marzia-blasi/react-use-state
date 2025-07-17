@@ -8,3 +8,7 @@ header {
   background-color: rgb(210, 203, 203);
   padding: 2%;
 }
+
+button {
+  padding: 1%;
+}
