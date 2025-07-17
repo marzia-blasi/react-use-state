@@ -40,19 +40,19 @@ export default function Main() {
     },
   ];
 
-    return (
-            <p>prova</p>
-                {languages.map((item) => {
-                    
-                    return (
-                        <>
-                        <button>{item.title} </button>
-                            <div><p>{item.text}</p></div>
-                        </>
-                
-                )})}
-                    
-    
-    
-  )
+  return (
+    <>
+      <p>prova</p>
+      {languages.map((item) => {
+        return (
+          <>
+            <button key={item.id}>{item.title}</button>
+            <div>
+              <p>{item.text}</p>
+            </div>
+          </>
+        );
+      })}
+    </>
+  );
 }
