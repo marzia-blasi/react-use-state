@@ -47,10 +47,15 @@ export default function Main() {
       {languages.map((item) => {
         return (
           <div key={item.id}>
-            <button>{item.title}</button>
-            <div>
-              <p>{item.text}</p>
-            </div>
+            <button onClick={handleClick}>
+              {open ? "open" : "close"}
+              {item.title}
+            </button>
+            {open && (
+              <div>
+                <p>{item.text}</p>
+              </div>
+            )}
           </div>
         );
       })}
